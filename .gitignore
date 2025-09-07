@@ -1,1 +1,10 @@
+# Rust
 /target
+
+# libFuzzer
+/input
+/corpus
+/timeout-*
+/crash-*
+/leak-*
+/oom-*
