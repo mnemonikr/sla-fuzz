@@ -22,7 +22,7 @@ checksum = "c3d036a3c4ab069c7b410a2ce876bd74808d2d0888a82667669f8e783a898bf1"
 
 [[package]]
 name = "build-corpus"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "flate2",
  "sleigh-config",
@@ -342,7 +342,7 @@ checksum = "0fda2ff0d084019ba4d7c6f371c95d8fd75ce3524c3cb8fb653a3023f6323e64"
 
 [[package]]
 name = "sla-fuzz"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "libfuzzer-sys",
  "libsla",
