@@ -13,9 +13,11 @@ to target the conventional libsla APIs.
 
 # Usage
 
+This fuzzer uses Address Sanitizer (ASAN) which requires Rust nightly compiler.
+
 ```sh
 # One time setup to initialize the corpus directory
-cargo run -p build-corpus
+./build-corpus.rs
 
 # Build sla-fuzz with ASAN to ensure ASAN libraries are linked
 cargo +nightly rustc -p sla-fuzz -- -Z sanitizer=address

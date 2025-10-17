@@ -1,9 +1,14 @@
-[workspace]
-members = ["crates/*"]
-resolver = "3"
-
-[workspace.package]
+[package]
+name = "sla-fuzz"
+version = "1.0.0"
 authors = ["mnemonikr"]
 edition = "2024"
 license = "Apache-2.0"
 repository = "https://github.com/mnemonikr/sla-fuzz"
+
+[dependencies]
+libfuzzer-sys = "0.4"
+libsla = { version = "0.4.3", features = ["fuzzing"] }
+
+[patch.crates-io]
+libsla-sys = { path = "../libsla-sys/" }
