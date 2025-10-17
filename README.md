@@ -1,7 +1,3 @@
-# 🏆 Trophy Case
-
-This fuzzer has found over 40 memory bugs. See [fuzzer findings](https://github.com/mnemonikr/sla-fuzz/issues?q=is%4Aissue%20label%3Afuzzer-finding) for full list of bugs.
-
 # Overview
 
 This fuzzer targets Ghidra's processing of `.sla` files.
@@ -43,3 +39,6 @@ INFO:        0 files found in input-freshness
 INFO:      141 files found in corpus
 ```
 
+# 🏆 Trophy Case
+
+This fuzzer has found over 40 memory bugs. See [fuzzer findings](https://github.com/mnemonikr/sla-fuzz/issues?q=is%4Aissue%20label%3Afuzzer-finding) for full list of bugs.
