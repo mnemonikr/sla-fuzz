@@ -1,3 +1,51 @@
+#!/usr/bin/env -S cargo +nightly -Zscript
+---
+[dependencies]
+flate2 = "1.1"
+
+[dependencies.sleigh-config]
+version = "1"
+features = [
+    "6502",
+    "68000",
+    "8048",
+    "8051",
+    "8085",
+    "AARCH64",
+    "ARM",
+    "Atmel",
+    "BPF",
+    "CP1600",
+    "CR16",
+    "DATA",
+    "Dalvik",
+    "HCS08",
+    "HCS12",
+    "JVM",
+    "Loongarch",
+    "M16C",
+    "M8C",
+    "MC6800",
+    "MCS96",
+    "MIPS",
+    "PA-RISC",
+    "PIC",
+    "PowerPC",
+    "RISCV",
+    "Sparc",
+    "SuperH",
+    "SuperH4",
+    "TI_MSP430",
+    "Toy",
+    "V850",
+    "Xtensa",
+    "Z80",
+    "eBPF",
+    "tricore",
+    "x86"
+]
+---
+
 use std::{
     io::Read,
     path::{Path, PathBuf},

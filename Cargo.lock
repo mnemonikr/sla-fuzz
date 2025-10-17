@@ -362,9 +362,9 @@ dependencies = [
 
 [[package]]
 name = "sleigh-config"
-version = "0.1.1"
+version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d1a7bc1aaf391a19fbdc40e626aef1b6954cbe7f9ef1b69c92b631caefb51168"
+checksum = "36c03500e884ff5312b820b4cdd329e119522ec109b7869333d4a889bdb62fe1"
 dependencies = [
  "heck",
  "sleigh-compiler",
