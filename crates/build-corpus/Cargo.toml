@@ -11,7 +11,7 @@ repository.workspace = true
 flate2 = "1.1"
 
 [dependencies.sleigh-config]
-version = "0.1.1"
+version = "1"
 features = [
     "6502",
     "68000",

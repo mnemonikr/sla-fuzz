@@ -6,15 +6,22 @@ Ghidra understands processor architectures through SLEIGH. Each processor is def
 `.slaspec` specification file. The SLEIGH compiler compiles this into a `.sla` file, which is used
 to build the SLEIGH object in libsla.
 
+Traditionally the `.sla` file has a fixed header followed by compressed data. This fuzzer is aware
+of this structure and specifically targets the Ghidra uncompressed data parser. This improved the
+fuzzing efficiency by 3x over an earlier version which used traditional structure aware methodology
+to target the conventional libsla APIs.
+
 # Usage
 
 ```sh
-# One time setup
-mkdir input
+# One time setup to initialize the corpus directory
 cargo run -p build-corpus
 
 # Build sla-fuzz with ASAN to ensure ASAN libraries are linked
 cargo +nightly rustc -p sla-fuzz -- -Z sanitizer=address
+
+# Create input directory
+mkdir input
 
 # Run the fuzzer
 ./target/debug/sla-fuzz input corpus
@@ -31,3 +38,7 @@ INFO: Loaded 1 modules   (83891 inline 8-bit counters): 83891 [0x5a949bd3e530, 0
 INFO:        0 files found in input-freshness
 INFO:      141 files found in corpus
 ```
+
+# 🏆 Trophy Case
+
+This fuzzer has found over 40 memory bugs. See [fuzzer findings](https://github.com/mnemonikr/sla-fuzz/issues?q=is%4Aissue%20label%3Afuzzer-finding) for full list of bugs.
