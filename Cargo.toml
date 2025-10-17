@@ -8,7 +8,4 @@ repository = "https://github.com/mnemonikr/sla-fuzz"
 
 [dependencies]
 libfuzzer-sys = "0.4"
-libsla = { version = "0.4.3", features = ["fuzzing"] }
-
-[patch.crates-io]
-libsla-sys = { path = "../libsla-sys/" }
+libsla = { version = "1", features = ["fuzzing"] }
