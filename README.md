@@ -19,14 +19,11 @@ This fuzzer uses Address Sanitizer (ASAN) which requires Rust nightly compiler.
 # One time setup to initialize the corpus directory
 ./build-corpus.rs
 
-# Build with ASAN to ensure ASAN libraries are linked
-cargo +nightly rustc -- -Z sanitizer=address
-
 # Create input directory
 mkdir input
 
-# Run the fuzzer
-./target/debug/sla-fuzz input corpus
+# Build with ASAN and run fuzzer
+RUSTFLAGS="-Zsanitizer=address" cargo +nightly run --target x86_64-unknown-linux-gnu --release -- input corpus
 ```
 
 ## Expected output
